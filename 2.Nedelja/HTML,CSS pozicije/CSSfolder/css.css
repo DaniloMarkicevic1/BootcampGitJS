@@ -1,0 +1,20 @@
+#slika1 {
+    position: relative;
+    left: 100px;
+    bottom: -50px;
+}
+
+#div {
+    position: absolute;
+    left: 200px;
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    
+}
+
+#slika2 {
+    position: absolute;
+    left: 18%;
+    top: 18%;
+}

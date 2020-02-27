@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, Gadget, sans-serif;
+    font-size: 20px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    padding: 10px 40px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 180%;
+}
+
+.link:hover {
+    background-color: orange;
+}
+
+.topnav {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.meni {
+    display: inline-block;
+}
+
+td {
+    text-align: center;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
+
+#misija {
+    background-image: url('house.jpg');
+}
+
+.grad {
+    color:orange;
+}
+
+.qa {
+    color:green;
+}
+
+.kontakt {
+    color:orange;
+}
+
+.divac:link {
+    color:green;
+}
+
+.divac:hover {
+    color:orange;
+}
+
+.divac:active {
+    color:blue;
+    background-color:gray;
+}

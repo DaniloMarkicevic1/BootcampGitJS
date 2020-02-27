@@ -1,0 +1,163 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+#header {
+    position: relative;
+    background-image: url('../images/lego_pizza.jpg');
+    height: 150px;
+    background-position: 0 -160px;
+    top:0;
+    width: 100%;
+    z-index: 2;
+    margin-top: 46px;
+}
+
+#div1 {
+        position: relative;
+        left: 200px;
+        width: 400px;
+        height: 400px;
+        background-color: red;
+        z-index: 0;
+           
+}
+header p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+#div {
+    color: white;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 20%;
+    z-index: 1;
+}
+
+#p1 {
+    color: red;    
+    top: 0;
+    left: 0;
+}
+
+#p2 {
+    color: yellow;    
+    top: 0;
+    right: 0;
+}
+
+#p3 {
+    color: white;    
+    bottom: 0;
+    left: 0;
+}
+
+#p4 {
+    color: rgb(0, 247, 255);    
+    bottom: 0;
+    right: 0;
+}
+
+.topbar {
+    position: fixed;
+    top:0;
+    z-index: 100;
+    width: 100%;
+    overflow: none; 
+}
+
+.topbar ul {
+    list-style-type: none;
+    background-color: #303030;
+    overflow: hidden;
+}
+
+.topbar li {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.topbar ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.topbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+.topbar a:hover {
+    color: yellowgreen;
+}
+
+nav li a {
+    display: block;
+    border-right: 2px yellowgreen solid;
+}
+
+nav li a:hover {
+    background-color: red;
+    font-weight: bold;
+}
+
+.podmeni {
+    position: absolute;
+    z-index: 2;
+    width: 25%;
+    background-color: #303030;
+    display: none;
+}
+
+.dropwdown:hover .podmeni {
+    display: block;
+}
+
+
+#slika3 {
+    display: none;
+    visibility: hidden;
+}
+
+aside a {
+    text-decoration: none;
+    color: black;
+}
+
+aside a:hover {
+    color:yellowgreen;
+}
+
+aside {
+    float: left;
+    clear: left;
+    width: 20%;
+}
+
+section {
+    float: right;
+    clear: right;
+    width: 75%;
+}
+
+.column {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+}
+
+section::after, .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}

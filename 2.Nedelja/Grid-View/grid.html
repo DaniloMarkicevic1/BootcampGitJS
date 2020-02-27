@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Grid</title>
+        <link rel="stylesheet" type="text/css" href="grid.css">
+    </head>
+
+    <body>
+        
+        <header class="col-12">
+            <h3>Ovo je header</h3>
+        </header>
+
+        <div class="row">
+            <nav class="col-3">
+                <ul>
+                    <li>Jedan</li>
+                    <li>Dva</li>
+                    <li>Tri</li>
+                </ul>
+                
+            </nav>
+            
+            <aside class="col-9">
+                Nekit test
+            </aside>
+        </div>
+
+        <div class="row">
+
+            <!-- Prva slika -->
+            <div class="col-4">
+                <img src="images/lights.jpg">
+                <p>Tekst ispod slike 1</p>
+            </div>
+
+            <!-- Druga slika -->
+            <div class="col-4">
+                <img src="images/mountains.jpg">
+                <p>Tekst ispod slike 2</p>
+            </div>
+
+            <!-- Treca slika -->
+            <div class="col-4">
+                <img src="images/nature.jpg">
+                <p>Tekst ispod slike 3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus vel iusto deleniti voluptas magnam eveniet eos obcaecati officiis, at quae sit, praesentium est temporibus ipsum voluptatem! Soluta possimus voluptates non.</p>
+            </div>
+
+        </div>
+        
+        <!-- Kartice -->
+        <div class="row">
+
+            <div class="col-3 povoljnosti kartica1">
+                <h3>Kartica 1</h3>
+                <ul>
+                    <li>Povoljnost1</li>
+                    <li>Povoljnost2</li>
+                    <li>povoljnost3</li>
+                </ul>
+                <p>Tekst K1</p>
+            </div>
+
+            <div class="col-4 povoljnosti kartica2">
+                <h3>Kartica 2</h3>
+                <ul>
+                    <li>Povoljnost1</li>
+                    <li>Povoljnost2</li>
+                    <li>povoljnost3</li>
+                </ul>
+                <p>Tekst k2</p>
+            </div>
+
+            <div class="col-5 povoljnosti kartica3">
+                <h3>Kartica 3</h3>
+                <ul>
+                    <li>Povoljnost1</li>
+                    <li>Povoljnost2</li>
+                    <li>povoljnost3</li>
+                </ul>
+                <p>Tekst k3</p>
+            </div>
+
+        </div>
+
+        <form>
+
+            <div class="row">
+                <label class="col-4">Ime</label>
+                <input type="text" class="col-8">                
+            </div>
+            
+            <div class="row">
+                <label class="col-4">Unesite Komentar</label>
+                <textarea class="col-8"></textarea>
+            </div>
+
+            <div class="row">
+                <label class="col-4">Biraj</label>
+                <select class="col-8">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <input type="button" class="col-2" value="Posaljite nam vase informacije, molimo vas">
+            </div>
+        </form>
+
+
+        <footer class="col-12">
+            <h4>Ovo je futer</h4>
+        </footer>
+    </body>
+</html>

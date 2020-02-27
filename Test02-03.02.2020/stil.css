@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+    margin:0px;
+    padding: 0;
+}
+
+[class*="col-"] {
+    float: left;
+}
+
+.row {
+    width: 100%;
+}
+
+.row::before,
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+header {
+    background-color: purple;
+    color: white;
+    padding: 20px 0 20px 10px;
+}
+
+footer {
+    background-color: purple;
+    color: white;
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {    
+    margin: 10px 20px 0 10px;
+    padding: 10px
+}
+
+nav>ul>li {
+    margin-top: 5px;
+    list-style-type: none;
+    background-color: purple;
+    padding: 15px;
+}
+
+nav li:hover {
+    color: yellow;
+    font-size: 95%;
+}
+
+aside {
+    margin-top: 40px;
+    margin-left: 15px;
+}
+
+aside img {
+    margin: 5px;
+    height: 150px;
+}
+
+aside img:hover {
+    opacity: 0.5;
+}
+
+aside img:active {
+    height: 50%;
+    width: 50%;
+}
+
+.form {
+    text-align: center;
+    color: purple;
+}
+
+.slika {
+    width: 200px;
+    height: 200px;
+}
+
+.label {
+    margin-top: 20px;
+}
+/*Za desktop*/
+@media only screen and (min-width: 700px) {
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-5 {
+        width: 41.66%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-8 {
+        width: 66.66%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-10 {
+        width: 83.33%;
+    }
+    .col-11 {
+        width: 91.66%;
+    }
+    .col-12 {
+        width: 100%;
+    }
+}
+
+/* Za mobilni uredjaj */
+@media only screen and (max-width: 700px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    aside p {
+        color:red;    
+    }
+    aside h2 {
+        color: purple;
+    }
+    aside h2:hover {
+        color: red;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    aside p {
+        color:purple;
+    }
+    aside h2 {
+            color: purple;
+    }
+    aside h2:hover {
+        color: purple;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    aside p {
+        color: purple;
+    }
+    aside h2 {
+        color: purple;
+    }
+    aside h2:hover {
+        color: purple;
+    }
+}

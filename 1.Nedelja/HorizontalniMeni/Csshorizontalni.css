@@ -1,0 +1,40 @@
+body {
+    margin: 0px;
+    font-size: 150%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 10px 10px 10px 0px;
+    overflow: hidden;
+    background-color: rgb(50, 93, 89);
+    position: fixed;
+    width: 100%;
+}
+
+#donji {
+    position: fixed;
+    bottom: 0;
+}
+
+li {
+    float: left;
+    padding: 10px;
+    width: 15%;
+}
+
+li:hover {
+    background-color: slategrey;
+}
+
+#cetvrti {
+    float: right;
+}
+#cetvrti2 {
+    float: right;
+}
+

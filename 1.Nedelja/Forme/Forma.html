@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elementi forme</title>
+    <link rel="stylesheet" href="CSSforma.css">
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Informacije</legend>
+
+            <!-- Unos Imena -->
+            <label>Ime:</label>
+            <input type="text"/><br>
+
+            <!-- Sakriveno polje -->
+            <input type="hidden"/>
+
+            <!-- Unos Prezimena-->
+            <label>Prezime:</label>
+            <input type="text"/>
+            <br>
+
+            <!-- Dugme za email -->
+            <label>E-mail:</label>
+            <input type="email"/>
+            <br>
+
+            <!-- Unos Lozinke (osetljivih podataka)-->
+            <label>Lozinka:</label>
+            <input type="password"/>
+            <br/>
+
+            <!-- Unos numerickog sadrzaja-->
+            <label>Koliko imate godina:</label>
+            <input type="number" min="1" max="120" step="1"/>
+            <br/>
+
+            <!-- Kalendar -->
+            <label>Kog datuma ste rodjeni:</label>
+            <input type="date" min="1900-01-01" max="2020-01-27" step="3">
+            <br>
+
+            <!-- Vreme -->
+            <label>Unesite vreme:</label>
+            <input type="time">
+            <br>
+
+            <!-- Unos URL adrese -->
+            <label>URL Adresa:</label>
+            <input type="url"/>
+            <br>
+
+            <!-- Odaberite jedan Pol -->
+            <label>Odaberite pol:</label>
+            <input type="radio" name="pol" value="m">Muški
+            <input type="radio" name="pol" value="z">Ženski
+            <input type="radio" name="pol" value="n" checked>Attack Helicopter
+            <br>
+
+            <!-- Odaberite jedan Kurs -->
+            <label>Odaberite kurs:</label>
+            <input type="radio" name="kurs"value="js" checked>JS
+            <input type="radio" name="kurs"value="qa">QA
+            <br>
+
+            <!-- Odaberite programski jezik -->
+            <label>Odaberite Programski Jezik:</label>
+            <input type="checkbox" name="jezik" value="html" checked>HTML
+            <input type="checkbox" name="jezik" value="css">CSS
+            <input type="checkbox" name="jezik" value="js">JS
+            <input type="checkbox" name="jezik" value="php">PHP
+
+            <!-- Odabir Fajla -->
+            <label>Priložite svoju biografiju:</label>
+            <input type="file">
+
+
+        </fieldset>
+        <fieldset>
+            <legend>O meni</legend>
+            <br>
+            <!-- Strani jezici -->
+            <label>Odaberite jezik:</label>
+            <input type="checkbox" name="strani" value="srp" checked>Srpski
+            <input type="checkbox" name="strani" value="esp">Španski
+            <input type="checkbox" name="strani" value="eng">Engleski
+            <input type="checkbox" name="strani" value="arap">Arapski
+            <input type="checkbox" name="strani" value="ger">Njemački
+            <br>
+
+            <!-- Dugme za pretragu -->
+            <label>Pretraga:</label>
+            <input type="search">
+            <br>
+
+            <!-- Dugme za boju -->
+            <label>Odaberite vašu omiljenu boju:</label>
+            <input type="color" value="#ff00ff">
+            <br>
+
+            <!-- Prva verzija Selekta -->
+            
+            <select name="progJezik">
+                <option value="html1">HTML</option>
+                <option value="css1">CSS</option>
+                <option value="js1">JS</option>                
+            </select>
+            <br>
+
+            <!-- Druga verzija Selekta (optgroup) -->
+            
+            <select>
+                <optgroup label="Niš">
+                    <option value="js1" name="Niš">JS</option>
+                    <option value="php1" name="Niš">PHP</option>
+                    <option value="" name="Niš">QA</option>
+                </optgroup>
+
+                <optgroup label="Beograd">
+                    <option value="js1" name="Beograd">JS</option>
+                    <option value="qa1" name="Beograd">QA</option>
+                </optgroup>
+            </select>         
+        </fieldset>
+
+         <!-- Dugme -->
+        <input type="button" value="Click me!" 
+        onclick="alert('Zdravoooo! :) ')">
+        <br>
+
+        <input type="submit" value="Potvrdi">
+        <input type="reset" value="Resetuj">
+    </form>
+</body>
+</html>

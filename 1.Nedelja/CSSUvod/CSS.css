@@ -1,0 +1,40 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style-type: none;
+    background-color:lightgray;
+    display: block;
+    width: 200px;
+    height: 645px;
+    font-size: 180%;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+li:hover {
+    background-color: green;
+}
+
+a:hover {
+    color:lightgoldenrodyellow
+}
+
+li {
+    padding: 10px 0px 10px 20px;
+    border-bottom: 1px solid white;
+}
+
+#Cetvrti {
+    border-bottom: 1px solid red;
+}
