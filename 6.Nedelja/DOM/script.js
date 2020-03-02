@@ -96,9 +96,38 @@ imena.forEach( elem => {
 });
 
 // Svako u novom paragrafu
-
+/*
 imena.forEach( elem => {
     let item = `<p>${elem}</p>`;
     lista.innerHTML += item; 
 });
-231
+*/
+// U jednoj koloni tabele
+let tabela = document.querySelector('table');
+let sadrzaj = '';
+imena.forEach(elem =>{
+    let item = `<tr><td>${elem}</td></tr>`
+    sadrzaj += item;
+});
+
+tabela.innerHTML += sadrzaj;
+// Dohvatamo sve child elemente body taga
+let potomci = document.body.children;
+console.log(potomci);
+// HTML Kolekcija - ne moze direktno forEach petlja
+// Za forEach petlju, moramo HTML kolekciju da konvertujemo u niz
+let niz = Array.from(potomci);
+
+niz.forEach(elem => {
+    console.log(elem);
+});
+
+// Dohvatimo sve child elemente UL liste.
+
+let decaListe = lista.children;
+let nizDecaListe = Array.from(decaListe);
+
+nizDecaListe.forEach(elem => {
+    console.log(elem);
+});
+ 

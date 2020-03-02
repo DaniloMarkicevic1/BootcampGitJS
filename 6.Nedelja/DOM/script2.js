@@ -110,8 +110,12 @@ paragrafi.forEach((elem, i) => {
         elem.style.color = 'white';
     }
 });
-console.log(par.classList);
+//Dodavanje klase elementu
 par.classList.add('error');
+console.log(par.classList);
+//Brisanje klase elementu
+par.classList.remove('error');
+console.log(par.classList);
 
 paragrafi.forEach( (par, i) => {
     if(i % 2 == 0) {
@@ -145,3 +149,41 @@ paragrafi.forEach(par => {
     }
 });
 console.log(paragrafi);
+
+paragrafi.forEach(par => {
+    par.classList.toggle('error');
+});
+
+// Dodavanje i brisanje HTML Tagova
+let paraElem = document.createElement('p');
+paraElem.innerText = 'Paragraf';
+let divElem = document.createElement('div');
+divElem.innerText = "Div";
+document.body.appendChild(paraElem);
+document.body.appendChild(divElem);
+// document.replaceChild(divElem, paraElem);
+// document.body.removeChild(divElem);
+
+let lista1 = document.createElement('ul');
+let li1 = document.createElement('li');
+li1.innerText = 'Prvi';
+let li2 = document.createElement('li');
+li2.innerText = 'Drugi';
+let li3 = document.createElement('li');
+li3.innerText = 'Treci';
+let lix = document.createElement('li');
+lix.innerText = 'X';
+let divLista = document.getElementById('lista');
+
+divLista.appendChild(lista1);
+lista1.appendChild(li1);
+lista1.appendChild(li2);
+lista1.appendChild(li3);
+
+// Prvi nacin za remove
+// lista1.removeChild(lista1.childNodes[0]);
+// Drugin nacin za remove
+// lista1.removeChild(lista1.firstChild);
+// lista1.replaceChild(li3, li2);
+lista1.removeChild(lista1.lastChild);
+lista1.replaceChild(lix, lista1.childNodes[1]);
