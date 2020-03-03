@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 22px;
+    background-color: darkcyan;
+}
+
+h1 {
+    color: purple;
+    margin-left: 10px;
+}
+
+ul {
+    padding-inline-start: 0px;
+}
+
+li {
+    list-style-type: none;
+    background-color: lightblue;
+    margin: 10px;
+    padding: 10px;
+    width: 270px;
+    border: solid 2px blueviolet
+}
+
+li:hover {
+    background-color: darkolivegreen;
+    cursor: pointer;
+}
+
+button {
+    width: 270px;
+    padding: 10px;
+    margin: 10px;
+    background-color: green;
+    color: yellowgreen;
+    font-size: 22px;
+}
+
+button:hover {
+    background-color: black;
+}
+
+#unesi {
+    font-size: 22px;
+    padding: 5px;
+    margin: 10px;
+    width: 270px;
+}
+
+input {
+    margin: 10px;
+}
+
