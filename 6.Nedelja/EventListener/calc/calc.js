@@ -1,39 +1,35 @@
+let btn = document.querySelectorAll('.broj');
+let btoOperacije = document.querySelectorAll('.operacija');
+
 let x = 0;
 let y = 0;
-let rez = 0;
 let op = '';
+let rez = 0;
 
-let b1 = document.querySelector('#b1');
-
-b1.addEventListener('click', () => {
-    if(x == 0) {
-        x = 1;
-    }
-    else {
-        y = 1;
-    }
+btn.forEach(elem => {
+    elem.addEventListener('click', () => {
+        if(x == 0) {
+            x = elem.textContent;
+        }
+        else {
+            y = elem.textContent;
+        }
+    });
 });
 
-let b2 = document.querySelector('#b2');
-
-b2.addEventListener('click', () => {
-    if(x == 0) {
-        x = 2;
-    }
-    else {
-        y = 2;
-    }
+btoOperacije.forEach(elem => {
+    elem.addEventListener('click', () => {
+        op = elem.textContent;
+        console.log(op);
+    });
 });
 
-let s = document.querySelector('#plus');
-
-s.addEventListener('click', () => {
-    op = "+";
-});
 
 let jednako = document.querySelector('#jednako');
 
 jednako.addEventListener('click', () => {
+    x = parseInt(x);
+    y = parseInt(y);
     switch(op) {
         case "+":
             rez = x + y;
@@ -51,5 +47,7 @@ jednako.addEventListener('click', () => {
     let paragraf = document.getElementById('rezultat');
     paragraf.innerText = rez;
     rez = 0;
+    y = 0;
+    x = 0;
 });
 
