@@ -1,5 +1,5 @@
 let form = document.querySelector('form');
-let tanciOdgovori = ["B", "A", "B", "B"];
+let tanciOdgovori = ["B", "A", "B", "B", "B"];
 
 let div = document.createElement('div');
 div.classList.add('intro');
@@ -35,19 +35,25 @@ form.addEventListener('submit', event => {
     let odg2 = form.q2.value
     let odg3 = form.q3.value
     let odg4 = form.q4.value
+    let odg5 = form.q5.value
 
     let skor = 0
-    let odgovori = [odg1, odg2, odg3, odg4];
+    let odgovori = [odg1, odg2, odg3, odg4, odg5];
     console.log(odgovori);
 
     odgovori.forEach((odg, i) => {
             if(odg == tanciOdgovori[i]) {
-                skor += 25;
+                skor += 20;
             }
     });
+
+    if(odg5.length > 6) {
+        skor += 20;
+    }
     console.log(skor);
     div.style.display = 'block';
     scrollTo(0, 0);
+
     let broj = 0;
     let clock = setInterval(() => {
         h2.textContent = `Vas odgovor je: ${broj}%`;
@@ -57,6 +63,5 @@ form.addEventListener('submit', event => {
         else {
             clearInterval(clock);
         }
-    }, 1000);
-    // 
+    }, 10);
 });
