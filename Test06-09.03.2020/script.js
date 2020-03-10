@@ -20,10 +20,6 @@ izracunaj.addEventListener('click', () => {
         }
     });
 
-    
-
-
-
     let rezultat = 0;
     let prvi = prviBroj.value;
     let drugi = drugiBroj.value;
@@ -67,13 +63,3 @@ izracunaj.addEventListener('click', () => {
         });
     forma.reset();
 });
-
-
-
-
-
-
-
-
-
-

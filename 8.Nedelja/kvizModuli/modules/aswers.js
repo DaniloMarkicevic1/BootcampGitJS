@@ -8,12 +8,12 @@ let calculateScore = odgovori => {
         if(odg == tacniOdgovori[i]) {
             skor += 20;
         }
+        if(odg.length > 6) {
+            skor += 20;
+        }
     });
-
-    if(odg5.length > 6) {
-        skor += 20;
-    }
     return skor;
+
 };
 
 export {tacniOdgovori, calculateScore};
