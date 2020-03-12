@@ -91,7 +91,61 @@ auto1.aBoja = "Plava";
 auto1.aImaKrov = true;
 console.log(auto1);
 
-let f1 = new Film("Naked Gun", "David Zucker", 1500);
+let f1 = new Film("Naked Gun", "David Zucker", 1500, [10, 7.9, 10, 9]);
+let f2 = new Film("Avatar", "James Cameron", 2009, [10, 7.4, 10, 9]);
+let f3 = new Film("Abbys", "James Cameron", 2012, [10, 7, 8, 9]);
+
 console.log(f1.najranijaGodina);
 console.log(f1.fNaslov);
 
+// NIZ FILMOVA
+
+let filmovi = [f1, f2, f3];
+
+// ISPIS OCENA OVIH FILMOVA.
+
+filmovi.forEach(f => {
+    let ocene = f.fOcene;
+    ocene.forEach(o => {
+        console.log(o);
+    })
+});
+console.log('PROSEK');
+console.log(f1.prosek());
+
+let filmVek = (nizFilmova, odGod, doGod) => {
+    nizFilmova.forEach(elem => {
+        if(elem.najranijaGodina >= odGod && elem.najranijaGodina <= doGod) {
+            elem.stampaj();
+        }
+    });
+};
+filmVek(filmovi, 2000, 2020);
+
+let prosecnaOcena = niz => {
+    let sum = 0;
+    let brOcena = 0;
+    niz.forEach(film => {
+        let ocene = film.fOcene;
+        //brOcena += ocene.legnth;
+        ocene.forEach(ocena => {
+            sum += ocena;
+            brOcena++;
+        });
+    });
+    let arsr = sum / brOcena;
+    return arsr;
+};
+
+console.log(`Prosecna ocena svih filmova je: ${prosecnaOcena(filmovi)}`);
+
+let najboljeOcenjeni = niz => {
+    let naj = niz[0];
+    niz.forEach(f => {
+        if(naj.prosek() < f.prosek()) {
+            naj = f;
+        }
+    });
+    return naj;
+};
+console.log(najboljeOcenjeni(filmovi));
