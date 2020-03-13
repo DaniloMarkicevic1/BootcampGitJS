@@ -121,7 +121,8 @@ let filmVek = (nizFilmova, odGod, doGod) => {
     });
 };
 filmVek(filmovi, 2000, 2020);
-
+// Napraviti funkciju prosecnaOcena kojoj se prosleđuje niz filmova, a koja
+// određuje i vraća prosečnu ocenu svih filmova.
 let prosecnaOcena = niz => {
     let sum = 0;
     let brOcena = 0;
@@ -138,7 +139,8 @@ let prosecnaOcena = niz => {
 };
 
 console.log(`Prosecna ocena svih filmova je: ${prosecnaOcena(filmovi)}`);
-
+// Napraviti funkciju najboljeOcenjeni kojoj se prosleđuje niz filmova, a ona vraća
+// najbolje ocenjeni film.
 let najboljeOcenjeni = niz => {
     let naj = niz[0];
     niz.forEach(f => {
@@ -149,3 +151,52 @@ let najboljeOcenjeni = niz => {
     return naj;
 };
 console.log(najboljeOcenjeni(filmovi));
+// Napraviti funkciju osrednjiFilm kojoj se prosleđuje niz filmova a ona vraća film
+// koji je najbliži prosečnoj oceni svih filmova.
+let osrednjiFilm = niz => {
+    let globalniProsek = prosecnaOcena(niz); // gp - 6.2
+    // f1 = 4.5
+    // f2 = 7
+    let najbliziElem = niz[0];
+    let najbliziProsek = niz[0].prosek() - globalniProsek;
+    niz.forEach(f => {
+        let pom = Math.abs(f.prosek() - globalniProsek);
+        if(pom < najbliziProsek) {
+            najbliziElem = f;
+            najbliziProsek = pom;
+        }
+    });
+    return najbliziElem; 
+};
+let osr = osrednjiFilm(filmovi);
+osr.stampaj();
+console.log(f1.prosek());
+console.log(f2.prosek());
+console.log(f3.prosek());
+
+// Napisati funkciju najcescaOcena kojoj se prosleđuje niz ocena, a ona vraća
+// ocenu koju su filmovi najčešće dobijali.
+
+let oc = [1, 5, 7, 8.3, 4.001, 10, 1, 9, 9, 5, 5, 5];
+
+let najcesca = oc[0];
+let ponvaljanje = 0;
+let maksPon = 0;
+for(let i = 0; i < oc.length; i++) {
+    for(let j = 0; j < oc.length; j++) {
+        if(oc[i] == oc[j]) {
+            ponvaljanje++;
+        }
+    }
+    if(ponvaljanje > maksPon) {
+        maksPon = ponvaljanje;
+        najcesca = oc[i];
+    }
+    ponvaljanje = 0;
+}
+
+console.log(`Najcesca ocena je ${najcesca}`);
+
+let iznadOceneNoviji = (niz, ocena) => {
+
+};
